@@ -1,109 +1,22 @@
-<!DOCTYPE html>
-<html lang="sv">
-    <head>
-        <meta charset="utf-8"/>
-        <title>Dropdown</title>
-    </head>
-   <style>
-      body {font-family: Arial;}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-nav {background: #2ba0db;}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-nav ul {
-    font-size: 0;
-    padding: 0;
-}
-nav ul li {
-    display: inline-block;
-    position: relative;
-}
-nav ul li a {
-    color: #fff;
-    display: block;
-    font-size: 14px;
-    padding: 15px 14px;
-    text-decoration: none;
-}
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
 
-nav ul li ul {
-    border-bottom: 5px solid #2ba0db;
-    display: none;
-    position: absolute;
-    width: 250px;
-}
-
-nav ul li ul li {
-    border-top: 1px solid #444;
-    display: block;
-}
-
-nav ul li ul li:first-child { border-top: none; }
-
-nav ul li ul li a {
-    background: #373737;
-    display: block;
-    padding: 10px 14px;
-}
-
-li a:hover {background: #126d9b;}
-
-.active {background-color: #126d9b;}
-  </style>
-  <script>
-    $(document).ready(function(){
-   
-    $(".sub-menu").click(function(e){
-        
-        if ($(this).hasClass("active"))
-        {
-            $(this).find(".drop").slideUp(200);
-            $(".sub-menu").removeClass("active");
-        }
-        
-        else
-        {
-            $(".sub-menu").removeClass("active");
-            $(".sub-menu").find(".drop").slideUp(100);
-            $(this).addClass("active");
-            $(".active").find(".drop").slideDown(200);
-        }
-        
-        e.stopPropagation();
-        
-    });
-    
-    $(window).click(function(){
-        $(".drop").slideUp(100);
-        $(".sub-menu").removeClass("active");
-    });
-
-    
-});
-  </script>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="#">Hem</a></li>
-                <li class="sub-menu"> <a href="#">Kategorier</a>
-                    <ul class="drop">
-                        <li><a href="#">Kategori 1</a></li>
-                        <li><a href="#">Kategori 2</a></li>
-                        <li><a href="#">Kategori 3</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu"> <a href="#">Tjänster</a>
-                    <ul class="drop">
-                        <li><a href="#">Tjänst 1</a></li>
-                        <li><a href="#">Tjänst 2</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Om oss</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-        </nav>
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="skript.js" type="text/javascript"></script>
-    </body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
